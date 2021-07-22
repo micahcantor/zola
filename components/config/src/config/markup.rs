@@ -32,6 +32,8 @@ pub struct Markdown {
     pub highlight_theme: String,
     /// Generate CSS files for Themes out of syntect
     pub highlight_themes_css: Vec<ThemeCss>,
+    /// Whether to render katex in markdown files
+    pub katex: bool,
     /// Whether to render emoji aliases (e.g.: :smile: => 😄) in the markdown files
     pub render_emoji: bool,
     /// Whether external links are to be opened in a new tab
@@ -105,6 +107,7 @@ impl Default for Markdown {
             highlight_code: false,
             highlight_theme: DEFAULT_HIGHLIGHT_THEME.to_owned(),
             highlight_themes_css: Vec::new(),
+            katex: false,
             render_emoji: false,
             external_links_target_blank: false,
             external_links_no_follow: false,
